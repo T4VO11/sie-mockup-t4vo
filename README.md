@@ -2,11 +2,12 @@
 
 Versión estática responsive para revisión en GitHub Pages.
 
+## Vista previa
+
+Sitio público: <https://t4vo11.github.io/sie-mockup-t4vo/>
+
 ## Publicación
-1. Subir todos los archivos de esta carpeta a la raíz de la rama `main`.
-2. En GitHub: Settings → Pages.
-3. Source: Deploy from a branch.
-4. Branch: `main` y carpeta `/ (root)`.
-5. Guardar.
+
+GitHub Pages publica automáticamente la raíz de la rama `main`.
 
 La página principal es `index.html`.
