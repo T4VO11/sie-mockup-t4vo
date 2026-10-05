@@ -1,0 +1,519 @@
+/* ============================================================
+   CORPORATIVO SIE · TWEAKCN THEME
+   Adaptado para HTML/CSS plano (sin Tailwind build)
+   ============================================================ */
+
+:root {
+  color-scheme: light;
+
+  --background: oklch(0.9940 0.0050 220);
+  --foreground: oklch(0.1850 0.0450 240.2000);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.1850 0.0450 240.2000);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.1850 0.0450 240.2000);
+  --primary: oklch(0.4020 0.1250 240.4000);
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.9450 0.0350 210.5000);
+  --secondary-foreground: oklch(0.3550 0.0850 225.3000);
+  --muted: oklch(0.9150 0.0150 210.2000);
+  --muted-foreground: oklch(0.5520 0.0250 210.5000);
+  --accent: oklch(0.7850 0.1450 215.2000);
+  --accent-foreground: oklch(0.1850 0.0450 240.2000);
+  --destructive: oklch(0.3850 0.1450 28.5000);
+  --destructive-foreground: oklch(1 0 0);
+  --border: oklch(0.8550 0.0250 210.5000);
+  --input: oklch(1 0 0);
+  --ring: oklch(0.4020 0.1250 240.4000);
+
+  --chart-1: oklch(0.7250 0.1550 218.5000);
+  --chart-2: oklch(0.4020 0.1250 240.4000);
+  --chart-3: oklch(0.7450 0.1450 215.2000);
+  --chart-4: oklch(0.5550 0.0650 245.5000);
+  --chart-5: oklch(0.6550 0.1850 45.2000);
+
+  --sidebar: oklch(0.9750 0.0150 220);
+  --sidebar-foreground: oklch(0.1850 0.0450 240.2000);
+  --sidebar-primary: oklch(0.4020 0.1250 240.4000);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.9210 0.0350 210.5000);
+  --sidebar-accent-foreground: oklch(0.4020 0.1250 240.4000);
+  --sidebar-border: oklch(0.8850 0.0150 210.2000);
+  --sidebar-ring: oklch(0.4020 0.1250 240.4000);
+
+  --font-sans: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Consolas, monospace;
+  --radius: 0.75rem;
+
+  --shadow-2xs: 0px 8px 24px -2px hsl(220 15% 10% / 0.02);
+  --shadow-xs: 0px 8px 24px -2px hsl(220 15% 10% / 0.02);
+  --shadow-sm: 0px 8px 24px -2px hsl(220 15% 10% / 0.04), 0px 1px 2px -3px hsl(220 15% 10% / 0.04);
+  --shadow: 0px 8px 24px -2px hsl(220 15% 10% / 0.04), 0px 1px 2px -3px hsl(220 15% 10% / 0.04);
+  --shadow-md: 0px 8px 24px -2px hsl(220 15% 10% / 0.04), 0px 2px 4px -3px hsl(220 15% 10% / 0.04);
+  --shadow-lg: 0px 8px 24px -2px hsl(220 15% 10% / 0.04), 0px 4px 6px -3px hsl(220 15% 10% / 0.04);
+  --shadow-xl: 0px 8px 24px -2px hsl(220 15% 10% / 0.04), 0px 8px 10px -3px hsl(220 15% 10% / 0.04);
+  --shadow-2xl: 0px 8px 24px -2px hsl(220 15% 10% / 0.10);
+
+  --tracking-normal: -0.0125em;
+
+  /* Alias para el CSS actual de Corporativo SIE */
+  --azul-profundo: var(--foreground);
+  --azul-profundo-2: var(--primary);
+  --azul-corporativo: var(--chart-1);
+  --celeste: var(--accent);
+  --fondo-secundario: var(--secondary);
+  --blanco: var(--card);
+  --texto: var(--foreground);
+  --texto-secundario: var(--muted-foreground);
+  --borde: var(--border);
+
+  --azul-marca-claro: var(--chart-1);
+  --azul-marca-medio: oklch(0.50 0.08 225);
+  --azul-marca-vivo: var(--chart-3);
+  --azul-marca-profundo: var(--foreground);
+  --azul-marca-fuerte: var(--primary);
+  --verde-gris: var(--muted-foreground);
+}
+
+html.dark {
+  color-scheme: dark;
+
+  --background: oklch(0.1450 0.0450 240.2000);
+  --foreground: oklch(0.9850 0.0050 240);
+  --card: oklch(0.2250 0.0450 240.2000);
+  --card-foreground: oklch(0.9850 0.0050 240);
+  --popover: oklch(0.1850 0.0450 240.2000);
+  --popover-foreground: oklch(0.9850 0.0050 240);
+  --primary: oklch(0.7250 0.1550 218.5000);
+  --primary-foreground: oklch(0.1450 0.0450 240.2000);
+  --secondary: oklch(0.2850 0.0550 225.3000);
+  --secondary-foreground: oklch(0.9850 0.0050 240);
+  --muted: oklch(0.2250 0.0450 240.2000);
+  --muted-foreground: oklch(0.7550 0.0250 210.5000);
+  --accent: oklch(0.7450 0.1450 215.2000);
+  --accent-foreground: oklch(0.9850 0.0050 240);
+  --destructive: oklch(0.4550 0.1450 28.5000);
+  --destructive-foreground: oklch(0.9850 0.0050 240);
+  --border: oklch(0.3550 0.0450 240.2000);
+  --input: oklch(0.1450 0.0450 240.2000);
+  --ring: oklch(0.7250 0.1550 218.5000);
+
+  --chart-1: oklch(0.7250 0.1550 218.5000);
+  --chart-2: oklch(0.5020 0.1250 240.4000);
+  --chart-3: oklch(0.7450 0.1450 215.2000);
+  --chart-4: oklch(0.6050 0.0650 245.5000);
+  --chart-5: oklch(0.6850 0.1850 45.2000);
+
+  --sidebar: oklch(0.1250 0.0450 240.2000);
+  --sidebar-foreground: oklch(0.9550 0.0050 240);
+  --sidebar-primary: oklch(0.7250 0.1550 218.5000);
+  --sidebar-primary-foreground: oklch(0.1450 0.0450 240.2000);
+  --sidebar-accent: oklch(0.2850 0.0550 225.3000);
+  --sidebar-accent-foreground: oklch(0.9850 0.0050 240);
+  --sidebar-border: oklch(0.3250 0.0450 240.2000);
+  --sidebar-ring: oklch(0.7250 0.1550 218.5000);
+
+  --shadow-2xs: 0px 12px 32px -4px hsl(240 50% 2% / 0.25);
+  --shadow-xs: 0px 12px 32px -4px hsl(240 50% 2% / 0.25);
+  --shadow-sm: 0px 12px 32px -4px hsl(240 50% 2% / 0.50), 0px 1px 2px -5px hsl(240 50% 2% / 0.50);
+  --shadow: 0px 12px 32px -4px hsl(240 50% 2% / 0.50), 0px 1px 2px -5px hsl(240 50% 2% / 0.50);
+  --shadow-md: 0px 12px 32px -4px hsl(240 50% 2% / 0.50), 0px 2px 4px -5px hsl(240 50% 2% / 0.50);
+  --shadow-lg: 0px 12px 32px -4px hsl(240 50% 2% / 0.50), 0px 4px 6px -5px hsl(240 50% 2% / 0.50);
+  --shadow-xl: 0px 12px 32px -4px hsl(240 50% 2% / 0.50), 0px 8px 10px -5px hsl(240 50% 2% / 0.50);
+  --shadow-2xl: 0px 12px 32px -4px hsl(240 50% 2% / 0.90);
+
+  --azul-profundo: var(--background);
+  --azul-profundo-2: var(--card);
+  --azul-corporativo: var(--primary);
+  --celeste: var(--accent);
+  --fondo-secundario: var(--secondary);
+  --blanco: var(--card);
+  --texto: var(--foreground);
+  --texto-secundario: var(--muted-foreground);
+  --borde: var(--border);
+
+  --azul-marca-claro: var(--primary);
+  --azul-marca-medio: var(--chart-2);
+  --azul-marca-vivo: var(--accent);
+  --azul-marca-profundo: var(--background);
+  --azul-marca-fuerte: var(--card);
+  --verde-gris: var(--muted-foreground);
+}
+
+/* Base */
+html {
+  background: var(--background);
+}
+
+body {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+  font-family: var(--font-sans);
+  letter-spacing: var(--tracking-normal);
+  transition: background-color .22s ease, color .22s ease;
+}
+
+::selection {
+  background: color-mix(in oklch, var(--primary) 32%, transparent);
+  color: var(--foreground);
+}
+
+a, button, input, textarea, select {
+  outline-color: var(--ring);
+}
+
+:focus-visible {
+  outline: 3px solid color-mix(in oklch, var(--ring) 45%, transparent);
+  outline-offset: 3px;
+}
+
+/* Navbar */
+.navbar {
+  background: color-mix(in oklch, var(--background) 88%, transparent) !important;
+  border-bottom-color: var(--border) !important;
+  backdrop-filter: blur(18px) saturate(135%);
+}
+
+.navbar__links a,
+.navbar__ia,
+.nav-movil a {
+  color: var(--foreground) !important;
+}
+
+.navbar__links a:hover,
+.navbar__links a.is-active,
+.nav-movil a:hover {
+  color: var(--primary) !important;
+  background: color-mix(in oklch, var(--primary) 9%, transparent) !important;
+}
+
+.navbar__cta,
+.boton--primario,
+.consultoria-form__submit {
+  background: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+  border-color: var(--primary) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.navbar__cta:hover,
+.boton--primario:hover,
+.consultoria-form__submit:hover {
+  background: color-mix(in oklch, var(--primary) 86%, var(--foreground)) !important;
+}
+
+.nav-movil {
+  background: var(--popover) !important;
+  border-color: var(--border) !important;
+}
+
+/* Toggle de tema */
+.sie-theme-toggle {
+  width: 42px;
+  height: 42px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--card);
+  color: var(--card-foreground);
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease;
+}
+
+.sie-theme-toggle:hover {
+  transform: translateY(-1px);
+  background: var(--secondary);
+  border-color: color-mix(in oklch, var(--primary) 35%, var(--border));
+}
+
+.sie-theme-toggle:active {
+  transform: scale(.95);
+}
+
+.sie-theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sie-theme-toggle .icon-moon { display: block; }
+.sie-theme-toggle .icon-sun { display: none; }
+
+html.dark .sie-theme-toggle .icon-moon { display: none; }
+html.dark .sie-theme-toggle .icon-sun { display: block; }
+
+/* Superficies generales */
+.experiencia-top,
+.soluciones-principales,
+.soluciones-especializadas,
+.cta-final,
+.conocenos-top,
+.conocenos-vmv,
+.conocenos-equipo {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+.sistema-card,
+.solucion-video-card,
+.cta-final__shell,
+.cta-final__panel,
+.consultoria-form,
+.conocenos-vmv__card,
+.conocenos-valores,
+.equipo-actual-card,
+.equipo-actual-card__info,
+.store-category {
+  background: var(--card) !important;
+  color: var(--card-foreground) !important;
+  border-color: var(--border) !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+.sistema-card:hover,
+.solucion-video-card:hover,
+.store-category:hover {
+  border-color: color-mix(in oklch, var(--primary) 42%, var(--border)) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+/* Textos */
+.hero__sistemas-titulo,
+.soluciones-especializadas h2,
+.sistema-card__descripcion,
+.solucion-video-card__contenido strong,
+.cta-final h2,
+.store-modern__copy h2,
+.conocenos-equipo__encabezado h2,
+.conocenos-vmv__titulo h2,
+.footer__col h4 {
+  color: var(--foreground) !important;
+}
+
+.hero__sistemas-subtitulo,
+.soluciones-especializadas__encabezado-derecha p,
+.solucion-video-card__contenido small,
+.cta-final__copy > p,
+.store-modern__copy > p,
+.conocenos-vmv__card p,
+.conocenos-valores__grid p,
+.footer__col p,
+.footer__legal {
+  color: var(--muted-foreground) !important;
+}
+
+/* Badges / chips / tags */
+.etiqueta-seccion,
+.soluciones-especializadas__eyebrow,
+.sistema-card__tags span,
+.cta-final__eyebrow,
+.store-modern__badge {
+  background: var(--secondary) !important;
+  color: var(--secondary-foreground) !important;
+  border-color: var(--border) !important;
+}
+
+/* Formularios */
+input,
+textarea,
+select {
+  background: var(--input) !important;
+  color: var(--foreground) !important;
+  border-color: var(--border) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--muted-foreground) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--ring) !important;
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--ring) 18%, transparent) !important;
+}
+
+/* Modal */
+.solucion-modal__dialog {
+  background: var(--popover) !important;
+  color: var(--popover-foreground) !important;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-2xl) !important;
+}
+
+.solucion-modal__video {
+  background:
+    radial-gradient(circle at 25% 20%, color-mix(in oklch, var(--accent) 22%, transparent), transparent 42%),
+    var(--secondary) !important;
+  border-color: var(--border) !important;
+}
+
+.solucion-modal__video-shell,
+.solucion-modal__video-placeholder-clean {
+  background: color-mix(in oklch, var(--card) 92%, transparent) !important;
+  border-color: var(--border) !important;
+}
+
+.solucion-modal__play-icon {
+  color: var(--primary) !important;
+  background: color-mix(in oklch, var(--primary) 12%, var(--card)) !important;
+}
+
+/* Store: se integra al sistema de color TweakCN */
+.store--purple {
+  background:
+    radial-gradient(520px 300px at 72% 42%, color-mix(in oklch, var(--accent) 18%, transparent), transparent 70%),
+    radial-gradient(420px 260px at 100% 0%, color-mix(in oklch, var(--primary) 10%, transparent), transparent 68%),
+    linear-gradient(135deg, var(--background), var(--secondary)) !important;
+  border-color: var(--border) !important;
+}
+
+.store-modern__copy h2 span,
+.store-modern__badge,
+.store-category,
+.store-modern__beneficios svg {
+  color: var(--primary) !important;
+}
+
+.store-modern__btn {
+  background: linear-gradient(135deg, var(--accent), var(--primary)) !important;
+  border-color: var(--primary) !important;
+  color: var(--primary-foreground) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+.store-modern__btn:hover {
+  background: var(--primary) !important;
+}
+
+.store-modern__halo {
+  border-color: color-mix(in oklch, var(--primary) 25%, transparent) !important;
+  box-shadow: 0 0 60px color-mix(in oklch, var(--primary) 10%, transparent) !important;
+}
+
+/* Footer */
+.footer,
+.page-nosotros .footer {
+  background: var(--sidebar) !important;
+  color: var(--sidebar-foreground) !important;
+  border-top-color: var(--sidebar-border) !important;
+}
+
+.footer__col a {
+  color: var(--muted-foreground) !important;
+}
+
+.footer__col a:hover,
+.footer__redes a svg {
+  color: var(--primary) !important;
+}
+
+.footer__redes a {
+  background: var(--card) !important;
+  border-color: var(--border) !important;
+}
+
+.footer__redes a:hover {
+  background: var(--primary) !important;
+  border-color: var(--primary) !important;
+}
+
+.footer__redes a:hover svg {
+  color: var(--primary-foreground) !important;
+}
+
+/* ============================================================
+   DARK MODE · Overrides para estilos históricos hardcodeados
+   ============================================================ */
+
+html.dark body,
+html.dark main {
+  background: var(--background) !important;
+  color: var(--foreground) !important;
+}
+
+html.dark .navbar {
+  background: color-mix(in oklch, var(--sidebar) 88%, transparent) !important;
+}
+
+html.dark .navbar__logo-color,
+html.dark .footer__logo {
+  filter: brightness(0) invert(1);
+}
+
+html.dark .hero__carrusel,
+html.dark .ecosistema-orbita__centro,
+html.dark .ecosistema-item,
+html.dark .sistema-card,
+html.dark .solucion-video-card,
+html.dark .cta-final__shell,
+html.dark .cta-final__panel,
+html.dark .consultoria-form,
+html.dark .conocenos-vmv__card,
+html.dark .conocenos-valores,
+html.dark .equipo-actual-card,
+html.dark .equipo-actual-card__info {
+  background-color: var(--card) !important;
+  color: var(--card-foreground) !important;
+  border-color: var(--border) !important;
+}
+
+html.dark .ecosistema-orbita__centro strong,
+html.dark .ecosistema-item b,
+html.dark .sistema-card__marca,
+html.dark .sistema-card__descripcion,
+html.dark .solucion-video-card__contenido strong,
+html.dark .solucion-modal__info h2,
+html.dark .cta-final h2,
+html.dark .conocenos-valores__grid strong {
+  color: var(--foreground) !important;
+}
+
+html.dark .ecosistema-orbita__centro small,
+html.dark .solucion-video-card__contenido small,
+html.dark .solucion-modal__info p,
+html.dark .cta-final__copy > p {
+  color: var(--muted-foreground) !important;
+}
+
+html.dark .sistema-card__tags span,
+html.dark .cta-final__beneficios span {
+  background: var(--secondary) !important;
+  color: var(--secondary-foreground) !important;
+  border-color: var(--border) !important;
+}
+
+html.dark .solucion-modal__backdrop {
+  background: rgb(2 8 14 / .78) !important;
+}
+
+html.dark .solucion-modal__cerrar {
+  background: var(--secondary) !important;
+  color: var(--secondary-foreground) !important;
+  border-color: var(--border) !important;
+}
+
+html.dark .store-device__screen {
+  border-color: color-mix(in oklch, var(--border) 75%, black) !important;
+}
+
+html.dark .store-category {
+  background: color-mix(in oklch, var(--card) 88%, transparent) !important;
+}
+
+/* Scrollbar discreto */
+html {
+  scrollbar-color: color-mix(in oklch, var(--primary) 55%, var(--muted)) var(--background);
+}
+
+/* Responsive del switch */
+@media (max-width: 640px) {
+  .sie-theme-toggle {
+    width: 42px;
+    height: 42px;
+  }
+}
